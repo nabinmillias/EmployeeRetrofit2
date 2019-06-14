@@ -6,9 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
-
 import com.example.employeeretrofit.Mofdels.EmployeeList;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,10 +45,8 @@ dialog.show();
                     Toast.makeText(MainActivity.this, "success", Toast.LENGTH_SHORT).show();
                     LinearLayoutManager verticalLayoutmanager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL, false);
                     recyclerview.setLayoutManager(verticalLayoutmanager);
-
-                    DataAdapter adpt=new DataAdapter((ArrayList<EmployeeList>) response.body(),MainActivity.this);
+                   DataAdapter adpt=new DataAdapter((ArrayList<EmployeeList>) response.body(),MainActivity.this);
                     recyclerview.setAdapter(adpt);
-
                     dialog.dismiss();
                 }
 

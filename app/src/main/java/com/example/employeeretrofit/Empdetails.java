@@ -1,8 +1,10 @@
 package com.example.employeeretrofit;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.employeeretrofit.Mofdels.EmployeeList;
@@ -44,5 +46,10 @@ public class Empdetails extends AppCompatActivity {
 
         }
     });
+    }
+
+    public void floatbtn(View view) {
+        Intent in=new Intent(Empdetails.this,Register.class);
+        startActivity(in  );
     }
 }
